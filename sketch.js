@@ -38,7 +38,7 @@ World.add(world,paperOb)
 }
 function keyPressed(){
 	if (keyDown("up")){
-		Matter.Body.applyForce(paperOb,paperOb.position,{x:1,y:-2}) 
+		Matter.Body.applyForce(paperOb,paperOb.position,{x:25,y:-25}) 
 	}
 }
 
