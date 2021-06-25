@@ -54,7 +54,7 @@ function draw() {
   push () 
   imageMode(CENTER)
   translate (paperOb.position.x,paperOb.position.y)
-  image (paperImg,0,0,50,50)
+  image (paperImg,0,0,this.r,this.r)
   pop ()
   groundObject.display();
   dustbinObj.display();
