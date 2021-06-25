@@ -36,7 +36,7 @@ function setup() {
 			friction:0,
 			density:1.2
 	}
-	paperOb=Bodies.circle(200,height-50,30,options)
+	paperOb=Bodies.circle(200,(this.r-20)/2p,30,options)
         World.add(world,paperOb)
 
 	Engine.run(engine);
