@@ -30,8 +30,14 @@ function setup() {
 	
 	groundObject=new ground(width/2,670,width,20);
 	dustbinObj=new dustbin(1200,650);
-paperOb=Bodies.circle(200,height-40,30)
-World.add(world,paperOb)
+        var options={
+			isStatic:false,
+			restitution:0.3,
+			friction:0,
+			density:1.2
+	}
+	paperOb=Bodies.circle(200,height-50,30,options)
+        World.add(world,paperOb)
 
 	Engine.run(engine);
   
@@ -45,12 +51,11 @@ function keyPressed(){
 function draw() {
   rectMode(CENTER);
   background(230);
- push () 
- imageMode(CENTER)
- translate (paperOb.position.x,paperOb.position.y)
- rotate (paperOb.angle)
- image (paperImg,0,0,50,50)
-pop ()
+  push () 
+  imageMode(CENTER)
+  translate (paperOb.position.x,paperOb.position.y)
+  image (paperImg,0,0,50,50)
+  pop ()
   groundObject.display();
   dustbinObj.display();
 
